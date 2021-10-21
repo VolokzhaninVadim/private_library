@@ -11,7 +11,7 @@ services:
       #- OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
     volumes:
       - ./config:/config
-      - /mnt/0/documents/projects/pc_settings/calibre/books/:/books
+      - ./books/:/books
     ports:
       - 8083:8083
     restart: unless-stopped
