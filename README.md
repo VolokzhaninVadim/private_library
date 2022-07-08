@@ -17,6 +17,16 @@
 
 ![картинка](./img/phone.png)
 
+### FAQ
+* Сменить пароль: 
+```
+# Заходим в контейнер
+docker exec -it calibre-web bash
+# Меняем пароль
+cd /app/calibre-web
+python3 cps.py -s admin:admin123
+```
+
 ## Ссылки 
 1. [Образ](https://docs.linuxserver.io/images/docker-calibre-web).
 1. [github](https://github.com/janeczku/calibre-web).
