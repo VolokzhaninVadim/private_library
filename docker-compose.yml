@@ -6,10 +6,13 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Asia/Vladivostok
+      - TZ=Europe/Moscow
+      - GUAC_USER=${USER} 
+      - GUAC_PASS=${CALIBRE_GUAC_PASS} 
     volumes:
       - ./config:/config
       - ./books/:/books
+      - /home/volokzhanin/docker/nextcloud/proxy/certs/:/certs
     ports:
       - 8083:8083
     restart: unless-stopped
