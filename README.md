@@ -1,32 +1,28 @@
-# Calibre - личная библиотека
+# Calibre - my private library
 ![картинка](./img/main.png)
 
-## Порядок установки на сервер: 
-1. Устанавливаем на пк calibre: `sudo pacman -S calibre`.
-1. Перемещаем `metadata.db` в необходимую папку, где будут лежать книги на сервере. БД может быть не доступна для записи, выполняем: `sudo chmod 777 ./metadata.db` и перезапускаем Docker. 
-1. Удаляем с пк calibre: `sudo pacman -R calibre`.
-1. В интерфейсе выбираем этот путь (см. п.2). 
-1. Изменяем пароль, тему, добавляем возможность загрузки книг. 
-1. Пробрасываем на роутере порты. 
-1. Доступ внутрь контейнера: `docker exec -it calibre-web bash `. 
-1. Backup делаем через `crontab -e`: `18 13 * * * /mnt/0/documents/projects/pc_settings/calibre/calibre_backup.sh`. 
-
-## Порядок установки на смартфон: 
-1. На смартфон устанавливаем [Moon+](https://play.google.com/store/apps/details?id=com.flyersoft.moonreader&hl=ru&gl=US). Прописываем [WebDAV](https://ru.wikipedia.org/wiki/WebDAV) и calibre ip. [WebDAV](https://ru.wikipedia.org/wiki/WebDAV) - обеспечиваем доступ через [nextcloud](https://github.com/VolokzhaninVadim/nextcloud) (личный репозиторий).
-1. Чтобы после закрытия книги была возможность вернуться на прежнюю страницу проставляем чек-бокс "Синхронизировать последнюю позицию через WebDav" (см. ниже). 
-
-![картинка](./img/phone.png)
+## Server install 
+1. Install on pc calibre (Arch linux): `sudo pacman -S calibre`.
+1. Move `metadata.db` in necessary path where our books will be located. Database can be no access, execute (Arch linux): `sudo chmod 777 ./metadata.db` и перезапускаем Docker. 
+1. Uninstall calibre from pc: `sudo pacman -R calibre`.
+1. In user interface select path (see point 2). 
+1. Chnge user and user password, add possibility for load books.
+1. Write ports on your router  
+1. Backup via `crontab -e`: `18 13 * * * /mnt/0/documents/projects/pc_settings/calibre/calibre_backup.sh`. 
+1. For external data base use [goodreads](https://www.goodreads.com).
 
 ### FAQ
-* Сменить пароль: 
+* Change password: 
 ```
-# Заходим в контейнер
+# Enter in container
 docker exec -it calibre-web bash
-# Меняем пароль
+# Change password
 cd /app/calibre-web
 python3 cps.py -s admin:admin123
 ```
 
-## Ссылки 
-1. [Образ](https://docs.linuxserver.io/images/docker-calibre-web).
-1. [github](https://github.com/janeczku/calibre-web).
+## Links 
+1. [Calibre docker image](https://docs.linuxserver.io/images/docker-calibre-web).
+1. [Calibre github](https://github.com/janeczku/calibre-web).
+1. [Readar docker image](https://hub.docker.com/r/hotio/readarr)
+1. [Readar github](https://github.com/hotio/readarr)
