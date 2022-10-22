@@ -10,9 +10,22 @@ services:
       - GUAC_USER=${USER} 
       - GUAC_PASS=${CALIBRE_GUAC_PASS} 
     volumes:
-      - ./config:/config
+      - ./config_calibre:/config
       - ./books/:/books
-      - /home/volokzhanin/docker/nextcloud/proxy/certs/:/certs
+      - /home/volokzhanin/docker/private_cloud/proxy/certs/:/certs
     ports:
       - 8083:8083
+    restart: unless-stopped
+  readarr:
+    image: hotio/readarr:testing
+    container_name: readarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Moscow
+    volumes:
+      - ./config_readarr:/config
+      - /mnt/backup/book/new_book/:/book
+    ports:
+      - 8787:8787
     restart: unless-stopped
