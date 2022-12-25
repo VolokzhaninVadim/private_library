@@ -6,7 +6,7 @@
 1. Move `metadata.db` in necessary path where our books will be located. Database can be no access, execute (Arch linux): `sudo chmod 777 ./metadata.db` и перезапускаем Docker. 
 1. Uninstall calibre from pc: `sudo pacman -R calibre`.
 1. In user interface select path (see point 2). 
-1. Chnge user and user password, add possibility for load books.
+1. Change user and user password, add possibility for load books.
 1. Write ports on your router  
 1. Backup via `crontab -e`: `18 13 * * * /mnt/0/documents/projects/pc_settings/calibre/calibre_backup.sh`. 
 1. For external data base use [goodreads](https://www.goodreads.com).
