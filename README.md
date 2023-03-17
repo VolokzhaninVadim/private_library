@@ -11,6 +11,11 @@
 1. Backup via `crontab -e`: `18 13 * * * /mnt/0/documents/projects/pc_settings/calibre/calibre_backup.sh`. 
 1. For external data base use [goodreads](https://www.goodreads.com).
 
+## Smartfon install 
+![img](https://play-lh.googleusercontent.com/DSZo9j5cd46iHJNg1WvqQUfxdOiufs4LEnKuwmiY4wzYS-enODO4pYQOEc9auExxkQ=w240-h480)
+
+Install [Moon+ Reader (Android)](https://play.google.com/store/apps/details?id=com.flyersoft.moonreader&hl=ru&gl=US)
+
 ### FAQ
 * Change password: 
 ```
