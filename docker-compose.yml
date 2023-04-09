@@ -11,7 +11,7 @@ services:
       - GUAC_PASS=${CALIBRE_GUAC_PASS} 
     volumes:
       - ./config_calibre:/config
-      - ./books/:/books
+      - /mnt/backup/books:/books
       - /home/volokzhanin/docker/private_cloud/proxy/certs/:/certs
     ports:
       - 8083:8083
@@ -25,7 +25,7 @@ services:
       - TZ=Europe/Moscow
     volumes:
       - ./config_readarr:/config
-      - /mnt/backup/book/new_book/:/book
+      - ./books/:/books
     ports:
       - 8787:8787
     restart: unless-stopped
