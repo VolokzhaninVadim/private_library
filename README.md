@@ -25,7 +25,7 @@ docker exec -it calibre-web bash
 cd /app/calibre-web
 python3 cps.py -s admin:admin123
 ```
-For backub use [private_library_backup.sh](./private_library_backup.sh) and [dag airflow](https://github.com/VolokzhaninVadim/airflow/blob/main/dags/backup_s3.py).
+For backup use [private_library_backup.sh](./private_library_backup.sh) and [dag airflow](https://github.com/VolokzhaninVadim/airflow/blob/main/dags/backup_s3.py).
 
 ## Links
 1. [Calibre docker image](https://docs.linuxserver.io/images/docker-calibre-web).
