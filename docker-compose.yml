@@ -7,12 +7,11 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Moscow
-      - GUAC_USER=${USER} 
-      - GUAC_PASS=${CALIBRE_GUAC_PASS} 
+      - GUAC_USER=${USER}
+      - GUAC_PASS=${CALIBRE_GUAC_PASS}
     volumes:
       - ./config_calibre:/config
       - /mnt/backup/books:/books
-      - /home/volokzhanin/docker/private_cloud/proxy/certs/:/certs
     ports:
       - 8083:8083
     restart: unless-stopped
