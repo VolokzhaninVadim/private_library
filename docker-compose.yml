@@ -24,7 +24,7 @@ services:
       - TZ=Europe/Moscow
     volumes:
       - ./config_readarr:/config
-      - ./books/:/books
+      - /mnt/backup/books:/books
     ports:
       - 8787:8787
     restart: unless-stopped
