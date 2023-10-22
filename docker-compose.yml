@@ -11,7 +11,7 @@ services:
       - GUAC_PASS=${CALIBRE_GUAC_PASS}
     volumes:
       - ./config_calibre:/config
-      - /mnt/backup/books:/books
+      - /mnt/backup/documents/books:/books
     # ports:
     #   - 8083:8083
     restart: unless-stopped
@@ -24,7 +24,7 @@ services:
       - TZ=Europe/Moscow
     volumes:
       - ./config_readarr:/config
-      - /mnt/backup/books:/books
+      - /mnt/backup/documents/books:/books
     # ports:
     #   - 8787:8787
     restart: unless-stopped

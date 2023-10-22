@@ -18,7 +18,7 @@ tar --create \
     --ignore-failed-read \
     --preserve-permissions \
     --verbose \
-$DIRECTORY_SOURCE '/mnt/backup/books/'
+$DIRECTORY_SOURCE
 
 echo $(date '+%Y-%m-%d %H %M %S') 'Create encrypted archive'
 gpg --recipient $GPG_KEY \
