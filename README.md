@@ -17,8 +17,7 @@
 Install [Moon+ Reader (Android)](https://play.google.com/store/apps/details?id=com.flyersoft.moonreader&hl=ru&gl=US)
 
 ## Backup
-For backup use [backup.sh](./backup.sh) and [unzip.sh](./unzip.sh).<br>
-[Yandex s3](https://cloud.yandex.ru/docs/storage/tools/s3fs).
+For backup use [backup-server](https://github.com/VolokzhaninVadim/duplicati).
 
 ### FAQ
 * Change password:
