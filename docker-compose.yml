@@ -15,16 +15,3 @@ services:
       - 8084:8083
     env_file: ".env"
     restart: unless-stopped
-  readarr:
-    image: hotio/readarr:testing
-    container_name: readarr
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Moscow
-    volumes:
-      - ./config_readarr:/config
-      - /mnt/media/books:/books
-    ports:
-      - 8787:8787
-    restart: unless-stopped
