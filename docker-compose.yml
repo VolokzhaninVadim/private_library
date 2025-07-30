@@ -11,5 +11,4 @@ services:
       - /mnt/media/books:/books
     ports:
       - 8084:8083
-    env_file: ".env"
     restart: unless-stopped
