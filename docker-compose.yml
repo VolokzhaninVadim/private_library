@@ -3,8 +3,8 @@ services:
     image: lscr.io/linuxserver/calibre-web:latest
     container_name: calibre
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=33
+      - PGID=33
       - TZ=Europe/Moscow
     volumes:
       - ./config_calibre:/config
