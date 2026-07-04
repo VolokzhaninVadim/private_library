@@ -1,6 +1,6 @@
 services:
-  calibre-web:
-    image: lscr.io/linuxserver/calibre-web:latest
+  calibre-web-automated:
+    image: crocodilestick/calibre-web-automated:latest
     container_name: calibre
     environment:
       - PUID=1000
@@ -8,7 +8,8 @@ services:
       - TZ=Europe/Moscow
     volumes:
       - ./config_calibre:/config
-      - /mnt/media/books:/books
+      - /mnt/media/books/books:/calibre-library
+      - /mnt/media/books/new_books:/cwa-book-ingest
     ports:
-      - 8084:8083
+      - "8084:8083"
     restart: unless-stopped
